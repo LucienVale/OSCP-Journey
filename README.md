@@ -85,8 +85,15 @@ This line tells Scapy to capture all ARP packets continuously and process them u
 
 What I Learned Through Troubleshooting
 	•	IndentationError: I encountered this when my else: statement was misaligned under a try/except block.
-	•	Fix: I corrected the indentation so else: aligned properly and ensured consistent 4-space tabs.
-	•	Scapy Installation: I had to run:
+	•	Fix: I corrected the indentation so else: aligned properly and ensured consistent 4-space tabs throughout the script.
+	•	Scapy Installation: Initially, Scapy wouldn’t run due to missing dependencies.
+	•	Fix: I resolved this by running:
+pip3 install --pre scapy[basic]
+	•	Network Configuration Across Virtual Machines: I ran into multiple network-related issues when trying to connect Kali Linux, Metasploitable2, and pfSense inside VirtualBox.
+	•	Fix: I had to experiment with different network adapter settings—bridged, NAT, and host-only—to properly isolate traffic and enable inter-VM communication. Ultimately, I configured all machines to use host-only networking to simulate a real LAN environment while keeping external traffic isolated. pfSense acted as the firewall/router, allowing me to simulate real-world scenarios.
+	•	I also verified IP assignments, confirmed gateway routes, and ensured DNS resolution worked across all machines. Troubleshooting this setup taught me how networking works at a practical level and gave me a clearer understanding of traffic flow, routing, and segmentation.
+	•	Command Flow and Dependencies: At various points, I executed commands that failed silently or returned unclear errors.
+	•	Fix: I learned to methodically trace back each command, check the order of execution, and verify prerequisite conditions (e.g., enabling packet forwarding before spoofing). This taught me the importance of thinking in steps—not just running tools blindly.
 
 pip3 install --pre scapy[basic]
 
