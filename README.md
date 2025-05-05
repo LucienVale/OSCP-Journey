@@ -4,7 +4,7 @@ rooted-by-lucien
 OSCP Journey – Chapter 2: Capturing Traffic with ARP Spoofing
 
 Book: Ethical Hacking – A Hands-On Introduction to Breaking In by Daniel G. Graham
-Author of Report: Luis Felix (aka Lucien Vale)
+Author of Report: Luis  (aka Lucien Vale)
 Environment: Kali Linux, VirtualBox, Host-Only Networking
 
 ⸻
